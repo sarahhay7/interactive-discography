@@ -5,3 +5,9 @@ Setup
 ```
 npm install
 ```
+
+compile
+---
+```
+npm run compile
+```

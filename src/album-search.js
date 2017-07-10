@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { albums } from '../data'
+import ArtistFilter from './artist-filter'
+import Timer from './timer'
+import AddSong from './add-song'
 
 export default class AlbumSearch extends Component {
   getSongs (songs) {
@@ -22,6 +25,7 @@ export default class AlbumSearch extends Component {
   render () {
     return(
       <div>
+        <Timer />
         <h2>Please Please Me</h2>
         {this.findSongs('Please Please Me')}
         <h2>Let it Be</h2>
@@ -30,6 +34,8 @@ export default class AlbumSearch extends Component {
         {this.findLead('George')}
         <h2>Ringo</h2>
         {this.findLead('Ringo')}
+        <ArtistFilter name="The Beatles" />
+        <AddSong />
       </div>
     )
   }

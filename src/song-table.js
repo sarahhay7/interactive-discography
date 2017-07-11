@@ -3,14 +3,14 @@ import SongRow from './song-row'
 
 export default class SongTable extends Component {
   render() {
-    var rows = [];
-    console.log(this.props.songs)
+    var rows = []
     this.props.songs.forEach((song) => {
-      console.log(song)
-      if (song.title.indexOf(this.props.filterText) === -1) {
+      const title = song.title.toLowerCase()
+      const text = this.props.filterText.toLowerCase()
+      if (title.indexOf(text) === -1) {
         return
       }
-      rows.push(<SongRow song={song} key={song.title} />)
+      rows.push(<SongRow song={song} key={song.title + song.year} />)
     })
     return (
       <table>

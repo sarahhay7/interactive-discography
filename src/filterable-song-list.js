@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SearchBar from './search-bar'
 import SongTable from './song-table'
+import LeadFilter from './lead-filter'
 
 export default class FilterableSongList extends Component {
   constructor(props) {

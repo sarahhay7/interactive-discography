@@ -19,6 +19,7 @@
     "express": "^4.15.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "remarkable": "^1.7.1",
     "webpack": "^2.6.0",
     "webpack-dev-middleware": "^1.10.2"
   }

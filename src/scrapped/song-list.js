@@ -5,7 +5,7 @@ export default class SongList extends Component {
     return (
       <ul>
         { this.props.songs.map(song => (
-          <li key={song.id}>{song.text}</li>
+          <li key={song.id}>{song}</li>
         ))}
       </ul>
     )

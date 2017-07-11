@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import { albums } from '../data'
+import { data } from '../data'
 import ArtistFilter from './artist-filter'
 import Timer from './timer'
 import AddSong from './add-song'
+import SongList from './song-list'
+import MarkdownEditor from './markdown-editor'
 
 export default class AlbumSearch extends Component {
+
   getSongs (songs) {
     return songs.map((i) => {
       const title = i.song
@@ -13,12 +16,12 @@ export default class AlbumSearch extends Component {
   }
 
   findSongs (album) {
-    const entries = albums.filter((i) => i.album === album)
+    const entries = data.filter((i) => i.album === album)
     return this.getSongs(entries)
   }
 
   findLead (lead) {
-    const entries = albums.filter((i) => lead.indexOf(i.leadVocals) !== -1)
+    const entries = data.filter((i) => lead.indexOf(i.leadVocals) !== -1)
     return this.getSongs(entries)
   }
 
@@ -36,6 +39,7 @@ export default class AlbumSearch extends Component {
         {this.findLead('Ringo')}
         <ArtistFilter name="The Beatles" />
         <AddSong />
+        <MarkdownEditor />
       </div>
     )
   }

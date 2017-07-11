@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AlbumSearch from './album-search';
+import { songs } from '../data';
+import FilterableSongList from './filterable-song-list';
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
-    React.createElement(AlbumSearch),
+    React.createElement(FilterableSongList, {songs: songs}, null),
     document.getElementById('mount')
   );
 });

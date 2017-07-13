@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import SearchBar from './search-bar'
 import SongTable from './song-table'
-import LeadFilter from './lead-filter'
+import PropTypes from 'prop-types'
 
 export default class FilterableSongList extends Component {
   constructor(props) {
@@ -17,10 +17,7 @@ export default class FilterableSongList extends Component {
   render() {
     return (
       <div>
-        <SearchBar
-          filterText={this.state.filterText}
-          onFilterTextInput={this.handleFilterTextInput}
-        />
+        <SearchBar onFilterTextInput={this.handleFilterTextInput} />
         <SongTable
           songs={this.props.songs}
           filterText={this.state.filterText}
@@ -28,4 +25,8 @@ export default class FilterableSongList extends Component {
       </div>
     );
   }
+}
+
+FilterableSongList.propTypes = {
+  songs: PropTypes.array.isRequired
 }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import SongRow from './song-row'
+import PropTypes from 'prop-types'
 
 export default class SongTable extends Component {
-  render() {
+  rows () {
     var rows = []
     this.props.songs.forEach((song) => {
       const title = song.title.toLowerCase()
@@ -12,6 +13,10 @@ export default class SongTable extends Component {
       }
       rows.push(<SongRow song={song} key={song.title + song.year} />)
     })
+    return rows
+  }
+
+  render() {
     return (
       <table>
         <thead>
@@ -20,8 +25,13 @@ export default class SongTable extends Component {
             <th>Song</th>
           </tr>
         </thead>
-        <tbody>{rows}</tbody>
+        <tbody>{ this.rows() }</tbody>
       </table>
     );
   }
+}
+
+SongTable.propTypes = {
+  songs: PropTypes.array.isRequired,
+  filterText: PropTypes.string
 }

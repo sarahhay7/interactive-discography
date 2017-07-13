@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 export default class SearchBar extends Component {
-  constructor(props) {
-    super(props)
-    this.handleFilterTextInputChange = this.handleFilterTextInputChange.bind(this)
-  }
-
-  handleFilterTextInputChange(e) {
-    this.props.onFilterTextInput(e.target.value)
-  }
   render() {
     return (
       <form>
@@ -16,9 +9,13 @@ export default class SearchBar extends Component {
           type="text"
           placeholder="Search..."
           value={this.props.filterText}
-          onChange={this.handleFilterTextInputChange}
+          onChange={(event) => this.props.onFilterTextInput(event.target.value)}
         />
       </form>
     );
   }
+}
+
+SearchBar.propTypes = {
+  onFilterTextInput: PropTypes.func.isRequired
 }

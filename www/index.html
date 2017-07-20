@@ -1,5 +1,56 @@
 <html>
 <head>
+  <style media="screen">
+    body, table, input {
+      font: 16pt/1.6em "Helvetica Neue";
+    }
+
+    body {
+      background: rgb(188, 158, 207);
+      margin: 2em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    input {
+      background: rgb(188, 158, 207);
+      color: white;
+      padding: 0.2em;
+      background: none;
+      border: none;
+      border-bottom: 1px solid white;
+      width: 100%;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    th {
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      color: #999;
+    }
+
+    td, th {
+      padding: 0.2em;
+    }
+
+    table {
+      background: white;
+      width: 100%;
+      border-radius: 0.2em;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 0.5em 2em;
+    }
+
+
+  </style>
   <script src="/bundle.js" ></script>
 </head>
 <body>

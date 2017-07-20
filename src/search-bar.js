@@ -10,6 +10,7 @@ export default class SearchBar extends Component {
           placeholder="Search..."
           value={this.props.filterText}
           onChange={(event) => this.props.onFilterTextInput(event.target.value)}
+          autoFocus={true}
         />
       </form>
     );
@@ -17,5 +18,6 @@ export default class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
-  onFilterTextInput: PropTypes.func.isRequired
+  onFilterTextInput: PropTypes.func.isRequired,
+  filterText: PropTypes.string
 }

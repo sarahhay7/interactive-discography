@@ -6,19 +6,19 @@ Usage
 Start the development server with this command:
 
 ```
-npm start
+yarn start
 ```
 
 
 Setup
 ---
 ```
-npm install
+yarn install
 ```
 
 
 compile
 ---
 ```
-npm run compile
+yarn run compile
 ```

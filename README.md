@@ -1,5 +1,7 @@
 React Project
 
+[![Code Climate](https://codeclimate.com/github/sarahhay7/interactive_discography/badges/gpa.svg)](https://codeclimate.com/github/sarahhay7/interactive_discography)
+
 Usage
 ---
 

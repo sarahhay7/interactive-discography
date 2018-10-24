@@ -17,8 +17,15 @@ yarn install
 ```
 
 
-compile
+Compile
 ---
 ```
 yarn run compile
+```
+
+
+Linter
+---
+```
+yarn run lint
 ```

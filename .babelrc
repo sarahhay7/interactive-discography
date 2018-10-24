@@ -1,6 +1,12 @@
 {
   "presets": [
+    "env",
     ["latest", { "modules": false }],
     "react"
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["env"], "react"]
+    }
+  }
 }

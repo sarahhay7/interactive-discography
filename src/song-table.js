@@ -30,6 +30,7 @@ export default class SongTable extends Component {
       <table>
         <thead>
           <tr>
+            <th>Year</th>
             <th>Album</th>
             <th>Song</th>
           </tr>

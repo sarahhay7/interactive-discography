@@ -7,7 +7,7 @@
     "compile": "webpack",
     "test": "yarn lint && NODE_ENV=test jest",
     "lint": "./node_modules/.bin/eslint *.js",
-    "start": "yarn compile && node server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Sarah Hay",
